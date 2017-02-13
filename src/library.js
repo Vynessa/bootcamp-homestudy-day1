@@ -42,20 +42,7 @@ module.exports = {
 	    return "called callback";
 	  }
 	}, 
-
-/*	isPrime: function(n)
-	{
-	  for(var i = 2; i < n; i++)
-	  {
-	    if(n % i === 0)
-	    {
-	      return false ;
-	    }  
-	  }
-	  return true;
-	},*/
-
-
+	
 	getPrimes: function(n){
 
 	var isPrime = function(n) {

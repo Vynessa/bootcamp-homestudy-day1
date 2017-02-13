@@ -37,8 +37,16 @@ describe("Data types tests ", function() {
       expect(dataTypes(144)).toBe('more than 100');
     });
 
+    it("should return 'more than 100' for 101", function() {
+      expect(dataTypes(101)).toBe('more than 100');
+    });
+
     it("should return 'equal to 100' for 100", function() {
       expect(dataTypes(100)).toBe('equal to 100');
+    });
+
+    it("should return 'less than 100' for 50", function() {
+      expect(dataTypes(50)).toBe('less than 100');
     });
 
 
@@ -50,12 +58,24 @@ describe("Data types tests ", function() {
       expect(dataTypes('tergiversate')).toBe(12);
     });
 
+    it("should return the length of `vanessa`", function() {
+      expect(dataTypes('vanessa')).toBe(7);
+    });
+
+    it("should return the length of `newman`", function() {
+      expect(dataTypes('newman')).toBe(6);
+    });
+
     it("should return the length of an empty string", function() {
       expect(dataTypes('')).toBe(0);
     });
 
     it("should return the length of `555`", function() {
       expect(dataTypes('555')).toBe(3);
+    });
+
+    it("should return the length of `6897hyb`", function() {
+      expect(dataTypes('6897hyb')).toBe(7);
     });
 
   });
@@ -69,6 +89,7 @@ describe("Data types tests ", function() {
     it("should return `undefined` for `[]`", function() {
       expect(dataTypes([])).not.toBeDefined();
     });
+    
     it("should return `undefined` for `[4, 9]`", function() {
       expect(dataTypes([4, 9])).not.toBeDefined();
     });
