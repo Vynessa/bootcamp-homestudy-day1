@@ -1,3 +1,5 @@
+'use strict'
+
 var dataTypes = require('../src/library.js').dataTypes;
 
 describe("Data types tests ", function() {

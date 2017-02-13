@@ -1,6 +1,7 @@
+'use strict'
+
 module.exports = {
-	dataTypes:function(args)
-	{
+	dataTypes:function(args) {
 		if ( typeof args === 'string') {
 	    return args.length;
 	  }
@@ -42,32 +43,43 @@ module.exports = {
 	  }
 	}, 
 
-	isPrime: function(n)
+/*	isPrime: function(n)
 	{
-	    for(var i = 2; i < n; i++)
+	  for(var i = 2; i < n; i++)
+	  {
+	    if(n % i === 0)
 	    {
-	        if(n % i === 0)
-	        {
-	            return false ;
-	        }  
-	    }
-	      return true;
-	 },
+	      return false ;
+	    }  
+	  }
+	  return true;
+	},*/
 
 
-	getPrimes: function(n)
-	{
-	  var arrOfPrimes = [];
+	getPrimes: function(n){
+
+	var isPrime = function(n) {
+	  for(var i = 2; i < n; i++)
+	  {
+	    if(n % i === 0)
+	    {
+	      return false ;
+	    }  
+	  }
+	  return true;
+	}
+
+	  var arrOfPrimeNums = [];
 	  if(typeof (n) !== 'number' || (n) < 2) {
 	    return 'Invalid input';
 	  }
 	  
 	  for(var j = 2; j <= n; j++) {
-	    if(this.isPrime(j)) {
-	      arrOfPrimes.push(j);
+	    if(isPrime(j)) {
+	      arrOfPrimeNums.push(j);
 	    }
 	  }
-	  return arrOfPrimes;   
+	  return arrOfPrimeNums;   
 	}
 
 }
