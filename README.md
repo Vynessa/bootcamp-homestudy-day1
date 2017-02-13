@@ -1,7 +1,7 @@
 # bootcamp-homestudy-day1
 
 ## Introduction
-This is a repository containing bootcamp assignments for Homestudy day 1. The following programming are on data types, get primes and Object-Oriented Programming modelling in Javascript.
+This is a repository containing bootcamp assignments for Homestudy day 1. The following programming exercises are on data types, get primes and Object-Oriented Programming modelling in Javascript.
 
 ## Setup
 Before commencing, ensure you have the required software to run this.
